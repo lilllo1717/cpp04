@@ -1,5 +1,5 @@
-#ifndef WRONGANIMAL_H
-#define WRONGANIMAL_H
+#ifndef ANIMAL_H
+#define ANIMAL_H
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
 #define GREEN   "\033[32m"
@@ -15,20 +15,20 @@
 
 
 
-class WrongAnimal
+class Animal
 {
     protected:
         std::string _type;       
 
     public:
-        WrongAnimal();
-        WrongAnimal(const std::string& type);
-        ~WrongAnimal();
-
-        WrongAnimal& operator=(const WrongAnimal& other);
-
+        Animal();
+        Animal(const std::string& type);
+        
+        Animal& operator=(const Animal& other);
+        
+        virtual ~Animal();
         const std::string& getType() const;
-        void makeSound() const;
+        virtual void makeSound() const = 0;
 };
 
     

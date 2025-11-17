@@ -1,5 +1,5 @@
-#ifndef CAT_H
-#define CAT_H
+#ifndef DOG_H
+#define DOG_H
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
 #define GREEN   "\033[32m"
@@ -16,22 +16,18 @@
 # include "Brain.hpp"
 
 
-
-
-class Cat : public Animal
+class Dog : public Animal
 {
     private:
         Brain* _brain;
     public:
-        Cat();
-        Cat(const std::string& type);
-        Cat(const Cat &other);
-        
-        Cat& operator=(const Cat& other);
-        void makeSound() const override;
-        virtual ~Cat();
-        Brain* getBrain();
+        Dog();
+        Dog(const std::string& type);
+        Dog(const Dog &other);
+        Dog& operator=(const Dog& other);
+        virtual ~Dog();
 
+        void makeSound() const override;
 
 };
 
